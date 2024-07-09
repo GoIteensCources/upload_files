@@ -1,0 +1,53 @@
+/* General styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container styles */
+div {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Link styles */
+a {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+a:hover {
+    background-color: #45a049;
+}
+
+/* Image styles */
+img {
+    margin: 10px;
+    border-radius: 10px;
+}
+
+h1 {
+    border: 2px #eee solid;
+    color: green;
+    text-align: center;
+    padding: 10px;
+}
+
+.flashes {
+    background-color: yellow;
+    text-color: red;
+    text-wide: 20px;
+    text-align: center;
+}

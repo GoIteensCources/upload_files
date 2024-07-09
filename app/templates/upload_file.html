@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% include 'components/__flash_message.html' %}
+
+    <ul>
+        {% for file in files %}
+        <li> <a href="{{ url_for('download', upload_id=file.id) }}">{{file.filename}}</a> </li>
+        {% endfor %}
+    </ul>
+
+
+    <div class="container">
+        <h1 class="display-4"> Uploading and Returning Files With a Database in Flask  </h1>
+
+        <form method="POST" action="{{url_for('upload_file')}}" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <button class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+{% endblock %}
