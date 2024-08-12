@@ -4,19 +4,36 @@
 
     {% include 'components/__flash_message.html' %}
 
+    <h3>Files</h3>
     <ul>
         {% for file in files %}
         <li> <a href="{{ url_for('download', upload_id=file.id) }}">{{file.filename}}</a> </li>
         {% endfor %}
     </ul>
+    <h3>Images</h3>
 
+    <ul>
+        {% for img in files %}
+        <p>{{img.imgname}}</p>
+        <li> image_as_blob: <img src="{{img.data_img|to_base64 }}" alt="Image" width="150" style="vertical-align:middle;margin:50px 0px"/> </li>
+        <li> image_as_path: <img src="{{url_for('media', filename=img.imgname)}}" alt="Image name" width="150" style="vertical-align:middle;margin:50px 0px"/> </li>
+
+        {% endfor %}
+    </ul>
 
     <div class="container">
         <h1 class="display-4"> Uploading and Returning Files With a Database in Flask  </h1>
 
         <form method="POST" action="{{url_for('upload_file')}}" enctype="multipart/form-data">
-            <input type="file" name="file">
-            <button class="btn btn-primary">Submit</button>
+            <div>
+                <label for="file_load">File: </label>
+                <input type="file" id="file_load" name="file_load">
+
+                <label for="image_load">Image:</label>
+                <input type="file" id="image_load" name="image_load">
+
+                <button class="btn btn-primary">Submit</button>
+            </div>
         </form>
     </div>
 

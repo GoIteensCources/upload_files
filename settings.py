@@ -6,3 +6,5 @@ class Config:
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = f'sqlite:///db_{BASE_DIR.split("/")[-1]}.db'
     SECRET_KEY = 'your secret key'
+    # UPLOAD_FOLDER = os.path.join(BASE_DIR, "media")
+    UPLOAD_FOLDER = os.path.join("app/media")

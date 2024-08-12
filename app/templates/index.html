@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Welcome to ... {% endblock %}</h1>
-
+    <h1>{% block title %} Welcome to Load file and Images {% endblock %}</h1>
     <div class="container">
         {% for k, v in data.items() %}
-        <p>{{k}}==============={{v}}</p>
+            <p>{{k}}==============={{v}}</p>
         {% endfor %}
+
     </div>
 
 {% endblock %}

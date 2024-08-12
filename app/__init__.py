@@ -21,3 +21,9 @@ db = SQLAlchemy(model_class=Base)
 db.init_app(app)
 
 from app.routes import *
+from app.filters import *
+
+
+@app.route('/media/<path:filename>')
+def media(filename):
+    return send_from_directory('media', filename)
